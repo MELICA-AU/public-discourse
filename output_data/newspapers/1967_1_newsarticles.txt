@@ -1,0 +1,3 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1206	1967	1	"Kursus i Brenderup"	"Aktuelt"	"1967-1-15"	"A brief notice that the Brenderup Municipal Civil Defense held a course at the Brenderup Community Hall, with 50 participating members each evening."	"Neutral"
+"2"	1152	1967	1	"Ønsker soldaters psyke bedømt"	"Aarhus Stiftstidende"	"1967-1-25"	"Not relevant. The article discusses revising the criteria for conscription (session) so it now includes physical evaluations."	"Neutral"

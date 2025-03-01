@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1161	1967	7	"Om at blive mandig"	"Folkebladet for Randers og omegn"	"1967-7-5"	"Not relevant. It is a book review of Brian Moore's book \"Gavin's Angels.\""	"Neutral"

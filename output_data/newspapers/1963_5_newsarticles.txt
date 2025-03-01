@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1228	1963	5	"Staten, pressen og spionerne"	"Information"	"1963-5-4"	"Not relevant? Britain has arrested a Soviet agent William Vassal who worked in the British Navy, with Lord Radcliffe producing a report on the case. The report was released at the same time that civil defense in England has been infiltrated and an Italian nuclear physicist was arrested in Southend for espionage. The article doesn't really deal with civil defense, but the above case"	"Neutral"

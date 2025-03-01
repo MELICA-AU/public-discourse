@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1072	1952	2	"Hvad Danmarks forsvar er værd"	"Bornholms Avis"	"1952-2-6"	"The article evaluates Denmark's defense, including civil defense. The writer, Hans Edvard Teglers, states that since the Korean War, civil defense has been built with great energy, especially the Civil Defense Corps. He notes that, among other things, urban civil defense is somewhat behind in its development."	"Validates | Wants more CD"

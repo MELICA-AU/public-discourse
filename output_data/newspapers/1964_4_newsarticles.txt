@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1179	1964	4	"Socialistisk Folkeparti"	"Vestkysten"	"1964-4-4"	"The invitation is for a lecture on civil defense in the nuclear age, taking place at Hansens Hotel in Vejen. Some of the speakers are Erik Schultz, the director of the Civil Defense Agency, and civil engineer Heinz Hansen."	"Neutral"

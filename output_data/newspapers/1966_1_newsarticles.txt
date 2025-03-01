@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1137	1966	1	"Dette blev til lov i den forløbne uge"	"Jyllands-Posten"	"1966-1-30"	"Not relevant. It discusses political negotiations regarding issues like public pensions, where people in civil defense can receive assistance."	"Neutral"

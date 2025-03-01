@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1328	1977	8	"Hærværk på CF-bygningen i Ørbæk"	"Løgstør Avis"	"1977-8-24"	"The civil defense depot building in Ørbæk has been vandalized, with windows broken. The vandalism has not been reported to the police and is likely the work of some mischievous boys who did not steal anything."	"Neutral"

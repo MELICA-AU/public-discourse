@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1307	1969	7	"Også for landkommunerne"	"Aarhus Stiftstidende"	"1969-7-21"	"Previously, only urban municipalities were required to submit statistics on their shelters, but now rural municipalities must do so as well. The civil defense in cities falls under the responsibility of the municipal council chairpersons, while civil defense in rural areas is overseen by the chief of police."	"Neutral"

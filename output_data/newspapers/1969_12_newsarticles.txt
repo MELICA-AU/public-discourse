@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1375	1969	12	"Civilforsvaret i Blovstrød"	"Frederiksborg Amts Avis"	"1969-12-17"	"Not relevant? Due to the law on revising the country’s municipal boundaries, the Civil Defense in Blovstrød will now fall under Allerød Municipality."	"Neutral"

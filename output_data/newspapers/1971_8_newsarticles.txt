@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1326	1971	8	"Mange efterretningssager til Stenlille kommunalbestyrelse"	"Sjællands Tidende"	"1971-8-24"	"Not relevant? The article discusses the topics that the Stenlille municipal council needs to address. One of the issues is that the Civil Defense Agency has requested a statement from the council. Additionally, Janus Hansen's rubber factory has applied for an exemption from the requirement to establish shelters."	"Neutral"

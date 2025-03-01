@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1245	1959	6	"Ny lærer"	"Frederiksborg Amts Avis"	"1959-6-10"	"Not relevant. Tage Nielsen has passed his teacher exam. He will now serve his military service and teach civil defence classes"	"Neutral"

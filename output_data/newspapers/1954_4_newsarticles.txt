@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1073	1954	4	"Jetjagere til et tysk hjemmeværn"	"Aalborg Stiftstidende"	"1954-4-10"	"Not relevant. It concerns Germany's plans for the establishment of a home guard and air defense. Additionally, it discusses that individual countries should manage their own civil defense."	"Validates"

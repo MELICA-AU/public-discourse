@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1191	1963	3	"Finansloven vedtaget"	"Jyllands-Posten"	"1963-3-30"	"The Finance Act has been passed by the ruling parties, Venstre and the Conservatives, and for the first time, it exceeds 10 billion. Skræppenborg-Nielsen from the Socialist People's Party (SF) stated that SF voted against it because they want Denmark to be completely disarmed and, therefore, will not support the Finance Act as it includes expenditures for civil defense and the military."	"Different opinions"

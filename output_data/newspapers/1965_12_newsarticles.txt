@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1231	1965	12	"Nysteds overskud 3.900 kr. men henlæggelse paa 78.000"	"Lolland-Falsters Folketidende"	"1965-12-15"	"Not relevant? This is a review of the City of Nysted's financial statements. They've spent less on civil defense than budgeted but does not say why. The budget was 6,000 kr, but only 5,369 kr has been spent."	"Neutral"

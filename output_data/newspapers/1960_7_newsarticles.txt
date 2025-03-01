@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1200	1960	7	"Republikanernes konvent begynder på mandag"	"Frit Folk"	"1960-7-23"	"Not relevant? The article discusses the upcoming selection of presidential and vice-presidential candidates by the Republicans. Governor Rockefeller stated that a stronger defense and civil defense must be built if the United States is to withstand a nuclear attack."	"Positive"

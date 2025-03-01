@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1232	1968	3	"Skatteudskrivningen stiger med 21,7 pct. i Nordborg"	"Sønderjyden"	"1968-3-12"	"Not relevant? Review of the budget in Nordborg. Tax printing will increase by 21.7 percent. In addition, the article mentions civil defense in connection with a review of the municipality's expenses without taking a position on civil defense"	"Neutral"

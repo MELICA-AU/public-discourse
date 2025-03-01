@@ -1,0 +1,3 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1063	1955	10	"Svensk forsvar er gået under jorden"	"Vordingborg Dagblad"	"1955-10-29"	"Not relevant. Sweden invests heavily in its civil defense, including efforts to create shelters by blasting them into the rock."	"Neutral | Validate"
+"2"	1079	1955	10	"Svensk forsvar er gået under jorden"	"Næstved Tidende"	"1955-10-29"	"Same article as 1063. Not relevant. Sweden invests heavily in its civil defense, including efforts to create shelters by blasting them into the rock."	"Neutral | Validate"

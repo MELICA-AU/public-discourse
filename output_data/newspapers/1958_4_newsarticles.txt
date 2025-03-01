@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1037	1958	4	"Alle maa hjælpe, hvis vi skal overleve krig"	"Aalborg Stiftstidende"	"1958-4-25"	"The head of civil defense in the U.S., Val Peterson, gave a lecture to 400 civil defense personnel in Aalborg. He emphasized the importance of civil defense doing everything it can to encourage people to take actions to survive a war. Additionally, he discussed two strategies for mitigating the effects of war: evacuation and shelters."	"Positive"

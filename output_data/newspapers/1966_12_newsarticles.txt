@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1237	1966	12	"Dødsfald på Fyn. Landoverpolitibetjent Peter Carstensen, Vissenbjerg, 55 år"	"Langelands Folkeblad"	"1966-12-28"	"Not relevant? The article is an obituary about the late police sergeant Peter Carstensen from Vissenbjerg on Fyn. Civil defense is mentioned because Carstensen previously held positions of trust within, among other things, civil defense"	"Neutral"

@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1213	1960	10	"Tidens tegn"	"Østsjællands Folkeblad"	"1960-10-24"	"In the Netherlands, 26 volunteers, both men and women, have made themselves available to the Dutch civil defense to be confined in a nuclear shelter for a week to undergo various survival tests."	"Neutral"

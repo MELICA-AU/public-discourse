@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1138	1962	5	"Russerne trænes i atom-forsvar"	"Aarhus Stiftstidende"	"1962-5-22"	"Not relevant. It concerns the Soviet Union's civil defense."	"Neutral"

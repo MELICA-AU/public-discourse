@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1075	1955	8	"Mursten af Risskaller"	"Randers Amtsavis"	"1955-8-23"	"Not relevant. In America, bricks made from rice husks that can block radioactive rays have been successfully manufactured. They have built a shelter from these bricks for the civil defense to use in experiments."	"Neutral | Validate"

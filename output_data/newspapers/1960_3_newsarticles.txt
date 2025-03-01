@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1247	1960	3	"Ugens radio-programmer. Program II"	"Skive Folkeblad"	"1960-3-4"	"Same article as 1204 and 1222. Not relevat. Overview of a radio program titled \"Voluntary or Compulsory Civil Defense?\" (Frivilligt eller tvungent civilforsvar?)"	"Neutral"

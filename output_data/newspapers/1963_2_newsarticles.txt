@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1201	1963	2	"Chance for frinummer paa foraarssessionen"	"Vendsyssel Tidende"	"1963-2-28"	"There is a high likelihood of drawing an exemption number for military conscription in North Jutland due to the large birth cohorts (fødselsårgange)."	"Neutral"

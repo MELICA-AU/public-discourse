@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1123	1967	8	"Det tyske forbundsværn. Af oberstløjtnant Haakon Husted"	"Svendborg Avis"	"1967-8-22"	"Not relevant. It’s about the West German defense."	"Neutral"

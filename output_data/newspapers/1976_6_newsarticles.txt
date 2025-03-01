@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1274	1976	6	"Stort Falck-byggeri i Sæby bliver forsinket"	"Vendsyssel Tidende"	"1976-6-8"	"Not relevant? The article is about Sæby’s plans to build a Falck station, which has been delayed. The construction will include a fire and rescue station, as well as facilities for Sæby Municipality's civil defense, including offices and civil defense garages."	"Neutral"

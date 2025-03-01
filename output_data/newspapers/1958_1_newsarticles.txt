@@ -1,0 +1,3 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1114	1958	1	"Blev politiker via journalistikken"	"Viborg Stiftstidende"	"1958-1-24"	"Not relevant. It concerns the American ambassador and former head of civil defense in the U.S., Val Peterson."	"Neutral"
+"2"	1080	1958	1	"Bare spørg løs, jeg kan lide at svare!"	"Aalborg Stiftstidende"	"1958-1-27"	"Not relevant. The interview is with Val Peterson, who is now the American ambassador to Denmark but was previously the head of the American civil defense."	"Neutral"

@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1102	1958	10	"Tredje-generations dansk-amerikaner i Eisenhowers raad"	"Berlingske Tidende"	"1958-10-20"	"Not relevant. The article concerns Danish-American Leo Hoegh, who has become the head of American civil defense and defense mobilization, and is visiting Copenhagen."	"Validates"

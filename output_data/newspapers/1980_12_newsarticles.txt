@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1020	1980	12	"Hvis krigen kommer: Så er Odder nogenlunde godt rustet"	"Aarhus Stiftsidende"	"1980-12-27"	"Odder has a good civil defense. The article tells also about economic cuts and criticism at national level that the civil defense will not function in a war situation"	"different opinions"

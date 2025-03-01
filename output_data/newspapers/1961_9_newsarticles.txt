@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1151	1961	9	"Selvhjælp-kursus for hele befolkningen"	"Aarhus Stiftstidende"	"1961-9-21"	"In connection with the leaflet \"If War Comes,\" civil defense plans to enhance its informational activities for the public by, among other things, arranging self-help courses. This is possible because civil defense has received an increase in its annual government funding."	"Positive"

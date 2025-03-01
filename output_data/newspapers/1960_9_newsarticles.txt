@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1147	1960	9	"Regions-Amtmænd skal paatage sig Regerings-Opgaver i en krig"	"Jyllands-Posten"	"1960-9-7"	"A descriptive article discusses the creation of 8 new administrative positions to ensure that society continues to function in the event of a war situation, which could disrupt communication between different regions and between regions and the government."	"Neutral"

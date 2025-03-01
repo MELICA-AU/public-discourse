@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1017	1956	1	"Egenbeskyttelsen i Aarhus"	"Demokraten (Århus)"	"1956-1-17"	"A tank guard manager (karreværnsleder) encourages people to sign up for training within the tank guards. In addition, he speaks positively for a strong civil defense"	"Positive"

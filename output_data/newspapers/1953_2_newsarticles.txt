@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1112	1953	2	"Situationen. Bulgarien stor Angrebs-Bastion"	"Nationaltidende"	"1953-2-12"	"Not relevant. It deals with the military buildup of various Eastern European states in 1952."	"Fear-mongering"

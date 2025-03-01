@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1223	1965	3	"40 husmænds mening om: Gårdejere, kunst, korn og rationaliseringerne"	"Bornholms Tidende"	"1965-3-31"	"The meeting at the Østermarie hotel on Bornholm, organized by the smallholders' (gårdmændenes) associations, included a participant named Jan Hansen who calculated that the costs for civil defense and the Royal Theatre were roughly the same. He argued that people benefit more from attending the theater."	"Negative"

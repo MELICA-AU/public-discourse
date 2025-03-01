@@ -1,0 +1,9 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1432	1984	5	"Ikke nok at sige A-B-C"	"Jydske Tidende"	"1984-5-11"	"The article is a letter to the editor by Steen Ö. Boll, a response leader in municipal Civil Defense and a liaison for the Turtle Movement. Boll argues that Civil Defense has been greatly neglected and calls for a public debate before the Civil Defense agreement is implemented. He supports the Socialist People’s Party’s (SF) reasoning for withdrawing from the agreement—namely, the need for a discussion on Civil Defense’s goals and a broader public debate on its possibilities and limitations, though Boll himself is not affiliated with SF. Boll emphasizes the importance of Civil Defense in light of advancements in weaponry, which increasingly target civilians, causing death and long-term harm. He argues for increased funding for Civil Defense and criticizes the lack of shelters, which currently protect only half the population. 
+As part of the Turtle Movement (Skildpaddebevægelsen), which advocates for Civil Defense using private resources, Boll has helped promote a pamphlet outlining five key demands for self-protection:  
+1. Everyone must be warned.  
+2. Shelters for all.  
+3. Everyone must be able to protect their breathing against war gases.  
+4. Emergency services must assist more people.  
+5. Emergency supplies must be available to everyone for days and weeks.  
+The movement estimates that Civil Defense is 20 billion DKK behind in necessary funding. Boll views Civil Defense as an essential component of national defense and stresses the need for a larger, better-trained volunteer force."	"Different opinions"

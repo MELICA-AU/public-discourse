@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1033	1955	2	"Nu skal det prøves. Atombomber mod kunstig by i ørkenen i Nevada"	"Aalborg Stiftstidende"	"1955-2-10"	"In a desert in Nevada, the Americans will construct an artificial city, where nuclear attacks will be carried out against it. This is being done to assess the capabilities of civil defense in protecting against atomic bombs."	"Neutral"

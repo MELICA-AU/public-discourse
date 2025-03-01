@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1185	1965	10	"SF: Måske trænger Krag til en pause"	"Kolding Folkeblad"	"1965-10-16"	"SF is dissatisfied with the policy being pursued by the Social Democrats under Prime Minister Krag and is unwilling to support them unconditionally. Morten Lange, the secretary of the parliamentary group, stated that SF will propose changes to the civil defense system to ensure it is not linked to the military."	"Different opinions"

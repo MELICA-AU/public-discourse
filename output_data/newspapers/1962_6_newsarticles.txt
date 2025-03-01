@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1224	1962	6	"Valg til Civilforsvar og boliganvisning"	"Morsø Folkeblad"	"1962-6-26"	"The city council, following a recommendation from the Morsø district, appointed merchant Kristen Thøgersen and senior assistant Helga Jensen to the civil defense commission. The rest of the article discusses elections to the housing allocation committee, the homeowners' association, and the Cooperative Housing Association."	"Neutral"

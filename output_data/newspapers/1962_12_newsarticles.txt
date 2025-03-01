@@ -1,0 +1,3 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1131	1962	12	"Noget helt nyt i Frankrigs hær"	"Aarhus Stiftstidende"	"1962-12-4"	"Not relevant. It concerns France's mobilization plans, where only 1.5 million men aged 20 to 37 will be conscripted in the event of a nuclear war."	"Neutral"
+"2"	1184	1962	12	"Kommunens regnskab har overskud på 154.000 kr"	"Hejmdal"	"1962-12-5"	"The article reports that Tønder Municipality has a surplus of 154,000 DKK in its accounts."	"Neutral"

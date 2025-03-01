@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1240	1964	11	"76.000 kr. i overskud i Nysted - henlæggelser paa godt 74.000"	"Lolland-Falsters Folketidende"	"1964-11-11"	"Not relevant? About Nysted municipality's operating and status accounts have been discussed at the Nysted town council meeting. There are savings in the fire service and civil defence of 4721 DKK, most of which come from savings in the fire service's operating accounts. The article does not elaborate further on why savings are needed in civil defence"	"Neutral"

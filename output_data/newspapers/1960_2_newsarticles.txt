@@ -1,0 +1,3 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1204	1960	2	"Program II"	"Fredericia Dagblad"	"1960-2-12"	"Not relevat. Overview of a radio program titled \"Voluntary or Compulsory Civil Defense?\" (Frivilligt eller tvungent civilforsvar?)"	"Neutral"
+"2"	1222	1960	2	"Program II"	"Viborg Stiftstidende"	"1960-2-19"	"Same article as 1204. Not relevat. Overview of a radio program titled \"Voluntary or Compulsory Civil Defense?\" (Frivilligt eller tvungent civilforsvar?)"	"Neutral"

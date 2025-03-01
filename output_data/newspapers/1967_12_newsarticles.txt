@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1202	1967	12	"Vil de overlevende misunde de døde?"	"Berlingske Aftenavis"	"1967-12-1"	"Not relevant. It's a review of the film \"The War Game.\""	"Neutral"

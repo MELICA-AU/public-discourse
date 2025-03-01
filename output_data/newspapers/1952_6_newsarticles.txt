@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1087	1952	6	"New York garderer sig mod Atombomber"	"Skagens Avis"	"1952-6-7"	"Not relevant. The article concerns civilian air defense in New York."	"Validates"

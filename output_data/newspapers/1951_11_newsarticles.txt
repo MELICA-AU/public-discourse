@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1001	1951	11	"Kultur-Bunker under Aarhus Universitetsparken"	"Aarhus Amtstidende"	"1951-11-12"	"The civil defence wants to build a bunker for 600 people under Bogtårnet"	"Neutral"

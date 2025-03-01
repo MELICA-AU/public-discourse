@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1140	1964	2	"Politi-hjemmeværnet i Aarhus udvides"	"Aarhus Stiftstidende"	"1964-2-1"	"The Police Home Guard in Aarhus is expanding with an A-company, which will assist with tasks such as traffic control in the event of mass transportation for civil defense. A Home Guard exhibition will be held at the police station in Aarhus, where visitors will have the opportunity to test their shooting skills, among other activities."	"Neutral"

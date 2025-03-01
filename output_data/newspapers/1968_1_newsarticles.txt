@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1180	1968	1	"Sæbebobler fra rummet"	"B.T"	"1968-1-4"	"Not relevant. People in Colorado have reported seeing a UFO. The director of the local civil defense, Morris Fleming, has stated that one of the eyewitnesses will be tested to determine if there are any unknown particles in his blood."	"Neutral"

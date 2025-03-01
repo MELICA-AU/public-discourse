@@ -1,0 +1,2 @@
+"ID"	"Year"	"Month"	"Title"	"Newspaper"	"Date"	"Content"	"Attitude_towards_civil_defense"
+"1"	1100	1951	7	"1000 bunkers færdige om 90 dage"	"B.T"	"1951-7-18"	"Not very relevant. The article is factual and does not express an opinion. It reports that 1,000 bunkers will soon be completed in Copenhagen and 11 large provincial towns."	"Neutral"
