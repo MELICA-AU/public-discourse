@@ -1,0 +1,90 @@
+Original_Newspaper_Name Distributed_in_Aarhus
+"Aalborg Amtstidende" No
+"Aalborg Stiftstidende" No
+"Aarhus Amtstidende" Yes
+"Aarhus Stiftsidende" Yes
+"Aarhus Stiftstidende" Yes
+Aktuelt Yes
+Amtsavisen No
+Amtsavisen_Randers No
+B.T Yes
+"Berlingske Aftenavis" Yes
+"Berlingske Tidende" Yes
+Bornholmeren No
+"Bornholms Avis" No
+"Bornholms Tidende" No
+Børsen Yes
+Dagbladet Yes
+"Dagens Nyheder" Yes
+"Demokraten (Aarhus)" Yes
+"Demokraten (Århus)" Yes
+"Den ny Frederikshavns Avis" No
+Djursland No
+Folkebladet No
+"Folkebladet Aktuelt" Yes
+"Folkebladet for Randers og omegn" No
+Folketidende No
+"Frederica Dagblad" No
+"Fredericia Dagblad" No
+"Frederiksborg Amts Avis" No
+"Frederiksborg Amtstidende" No
+"Frit Folk" No
+"Fyens Stiftstidende" No
+"Fyns Amts Avis" No
+"Fynsk Aktuelt" No
+Hejmdal No
+"Helsingør Dagblad" No
+"Herning Avis" No
+"Herning Folkeblad" No
+"Holbæk Amts Venstreblad" No
+"Holstebro Dagblad" No
+"Horsens Folkeblad" No
+"Horsens Socialdemokrat" No
+Information Yes
+"Jydske Tidende" Yes
+Jyllands-Posten Yes
+"Kolding Folkeblad" No
+"Land og Folk" Yes
+"Langelands Folkeblad" No
+"Lemvig Folkeblad" No
+"Løgstør Avis" No
+"Lolland-Falsters Folketidende" No
+"Lolland-Falsters Stiftstidende" No
+"Middelfart Venstreblad" No
+"Midtjyllands Avis" Yes
+"Morsø Folkeblad" No
+"Næstved Tidende" No
+Nationaltidende Yes
+"Ny dag" No
+"Ny Dag" No
+"Ny tid" No
+"Ny Tid" No
+"Østsjællands Folkeblad" No
+"Randers Amtsavis" No
+"Randers Dagblad" No
+"Randers Dagblad og Folketidende" No
+"Ribe Stiftstidende" No
+"Ringkjøbing Amts Dagblad" No
+"Roskilde Dagblad" No
+"Silkeborg Avis" No
+"Sjællands Tidende" No
+"Skagens Avis" No
+"Skive Folkeblad" No
+Søndags_Aktuelt No
+Sønderjyden No
+"Sønderjyden Aktuelt" No
+"Svendborg Avis" No
+Sydvestjylland No
+"Thisted Amts Tidende" No
+"Thisted Amtsavis" No
+"Thisted Dagblad" No
+Tingakrossur No
+"Vejle Amts Folkeblad" No
+"Vendsyssel Tidende" No
+Vestjyden No
+"Vestjysk Aktuelt" No
+Vestkysten No
+"Viborg Stifts Folkeblad" No
+"Viborg Stiftstidende" No
+"Vordingborg Dagblad" No
+Weekendavisen Yes

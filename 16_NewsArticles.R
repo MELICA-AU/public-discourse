@@ -12,6 +12,20 @@ news <- read_sheet("https://docs.google.com/spreadsheets/d/1LgStefx41sNq3oIDijGL
            range = "Articles")
 names(news)
 
+# Classify the outlet by relevance to Aarhus
+sort(unique(news$Newspaper))
+write_delim(data.frame(Original_Newspaper_Name = sort(unique(news$Newspaper)),
+                                                      Distributed_in_Aarhus = relevant), "test.txt")
+
+relevant <- c("No","No","Yes","Yes","Yes","Yes","No","No","Yes","Yes","Yes","No","No","No","Yes","Yes","Yes","Yes","Yes","No","No","No","Yes","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","Yes","Yes","Yes","No","Yes","No","No","No","No","No","No","Yes","No","No","Yes","No","No","No","No","No","No","No","No","No","No","No","No","No","No",
+                          "No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","No","Yes")
+newspaper <- as_tibble(data.frame(Original_Newspaper_Name = sort(unique(news$Newspaper)),
+                        Distributed_in_Aarhus = relevant))   
+
+# Join the relevance to news dataset
+news <- news %>% 
+  left_join(newspaper, by = c("Newspaper" = "Original_Newspaper_Name"))
+
 # # Define the subdirectory path
 # sub_dir <- "output_data/newspapers"
 # 
@@ -41,27 +55,33 @@ names(news)
 news <- news %>%
   mutate(
     Type = case_when(
-      str_detect(Attitude_towards_civil_defense, regex("Negative", ignore_case = TRUE)) ~ "Negative",
-      str_detect(Attitude_towards_civil_defense, regex("Validates*", ignore_case = TRUE)) ~ "Validating",
-        str_detect(Attitude_towards_civil_defense, regex("Positive*", ignore_case = TRUE)) ~ "Positive",
-        str_detect(Attitude_towards_civil_defense, regex("Mixed*", ignore_case = TRUE)) ~ "Mixed",
-        str_detect(Attitude_towards_civil_defense, regex("Neutral", ignore_case = TRUE)) ~ "Neutral",
-      str_detect(Attitude_towards_civil_defense, regex("Different*", ignore_case = TRUE)) ~ "Mixed",
+      str_detect(Attitude_towards_civil_defense, regex("^Negative*", ignore_case = TRUE)) ~ "Negative",
+      str_detect(Attitude_towards_civil_defense, regex("^Validate*", ignore_case = TRUE)) ~ "Validating",
+        str_detect(Attitude_towards_civil_defense, regex("^Positive*", ignore_case = TRUE)) ~ "Positive",
+        str_detect(Attitude_towards_civil_defense, regex("^Mixed*", ignore_case = TRUE)) ~ "Critique",
+        str_detect(Attitude_towards_civil_defense, regex("^Neutral", ignore_case = TRUE)) ~ "Neutral",
+      str_detect(Attitude_towards_civil_defense, regex("^Different*", ignore_case = TRUE)) ~ "Critique",
       TRUE ~ "Other"
     )
-  )
+  ) 
+#%>% 
+#  select(Title, Newspaper, Type, Attitude_towards_civil_defense ) %>% 
+#  print(n =20)
 
 glimpse(news)
+
 # ------- Start with time
+
 news <- news %>%
+  mutate(Page_number = as.character(Page_number)) %>% 
   mutate(Date = as_date(Date))
 
 # ------- Start with time
 
-# Convert the tibble into a temporal tsibble (lose 20 records without date)
+# Convert the tibble into a temporal tsibble (lose records without date)
 n_ts <- as_tsibble(news %>% filter(!is.na(Date)), key = ID, index = Date)
 
-#saveRDS(n_ts, "output_data/archivedocs20240820_tsbl.rds")
+# saveRDS(n_ts, "output_data/articles_ts.rds")
 
 # Aggregate publication dates over monthly periods
 df_monthly <- n_ts %>%
@@ -94,7 +114,7 @@ autoplot(df_monthly, count) +
 ggsave("figures/articles_undiff.png")
 
 
-autoplot(publ_monthly, count) +
+autoplot(type_monthly, count) +
   labs(
     title = "CD-relevant newspaper articles per Month",
     x = "Year-Month",
@@ -110,3 +130,87 @@ autoplot(publ_monthly, count) +
   )# Adjust these values to move the legend
 
 # clean up more of teh Type in original data : too many categories now
+
+
+library(ggplot2)
+
+ggplot(docs_monthly, aes(x = year_month, y = count, color = Type)) +
+  geom_point(size = 2, alpha = 0.7) +  # Scatter plot points
+  labs(
+    title = "CD-relevant newspaper articles per Month",
+    x = "Year-Month",
+    y = "Number of articles"
+  ) +
+  guides(colour = guide_legend(title = "Document type")) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.8),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+
+
+# An area plot can work if you summarize the article counts over time instead of focusing on individual data points.
+
+ggplot(docs_monthly, aes(x = year_month, y = count, fill = Type)) +
+  geom_area(position = "stack", alpha = 0.6) +  # Stacked area to show cumulative effect
+  labs(
+    title = "Articles discussing civil-defense per month from all Danish newspapers",
+    x = "Year-Month",
+    y = "Number of articles"
+  ) +
+  guides(fill = guide_legend(title = "Article position")) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.8),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+ggsave( "figures/CDarticlesDK.png")
+
+
+# ---- CD-relevant articles in Aarhus
+
+# Convert the tibble into a temporal tsibble (lose records without date)
+an_ts <- as_tsibble(news %>% filter(Distributed_in_Aarhus == "Yes"), key = ID, index = Date)
+
+#saveRDS(n_ts, "output_data/archivedocs20240820_tsbl.rds")
+
+# Aggregate publication dates over monthly periods
+aa_df_monthly <- an_ts %>%
+  #filter(Date > "1940-01-01") %>% 
+  tsibble::index_by(year_month = ~ yearmonth(.)) %>% # monthly aggregates
+  summarise(count = n()) 
+
+# Aggregate publication dates over monthly periods with type
+aa_type_monthly <- an_ts %>% 
+  # filter(Date > "1940-01-01") %>% 
+  tsibble::index_by(year_month = ~ yearmonth(.)) %>% # monthly aggregates
+  group_by(Type) %>% 
+  summarise(count = n()) 
+
+# Aggregate publication dates over monthly periods with type, and 'date' type for ggplot
+aa_docs_monthly <- aa_type_monthly %>%
+  as_tibble() %>% 
+  mutate(year_month = as.Date(year_month))
+
+# An area plot can work if you summarize the article counts over time instead of focusing on individual data points.
+
+ggplot(aa_docs_monthly, aes(x = year_month, y = count, fill = Type)) +
+  geom_area(position = "stack", alpha = 0.6) +  # Stacked area to show cumulative effect
+  labs(
+    title = "Articles discussing civil-defense per month in Aarhus",
+    x = "Year-Month",
+    y = "Number of articles"
+  ) +
+  guides(fill = guide_legend(title = "Article position")) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.8),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+ggsave( "figures/CDarticlesAarhus.png")
