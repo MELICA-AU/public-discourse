@@ -26,6 +26,10 @@ newspaper <- as_tibble(data.frame(Original_Newspaper_Name = sort(unique(news$New
 news <- news %>% 
   left_join(newspaper, by = c("Newspaper" = "Original_Newspaper_Name"))
 
+glimpse(news)
+
+# # Export each article as a text file: 
+
 # # Define the subdirectory path
 # sub_dir <- "output_data/newspapers"
 # 
@@ -36,9 +40,7 @@ news <- news %>%
 # } else {
 #   message("Directory '", sub_dir, "' already exists.")
 # }
-# 
-# 
-# years <- 1950:1990  # sort the years, so you don't end up looping over each line in the csv
+# # # years <- 1950:1990  # sort the years, so you don't end up looping over each line in the csv
 # months <- 1:12  # same for months
 # 
 # for (y in years){
@@ -51,6 +53,7 @@ news <- news %>%
 # Voyant: https://voyant-tools.org/?corpus=d1349fcba96a6810b0233420b3dfc9b9
 
 # ---Classification of documents by sentiment (Positive Negative)
+table(news$Attitude_towards_civil_defense)
 
 news <- news %>%
   mutate(
@@ -60,7 +63,7 @@ news <- news %>%
         str_detect(Attitude_towards_civil_defense, regex("^Positive*", ignore_case = TRUE)) ~ "Positive",
         str_detect(Attitude_towards_civil_defense, regex("^Mixed*", ignore_case = TRUE)) ~ "Critique",
         str_detect(Attitude_towards_civil_defense, regex("^Neutral", ignore_case = TRUE)) ~ "Neutral",
-      str_detect(Attitude_towards_civil_defense, regex("^Different*", ignore_case = TRUE)) ~ "Critique",
+      str_detect(Attitude_towards_civil_defense, regex("^[Dd]ifferent*", ignore_case = TRUE)) ~ "Critique",
       TRUE ~ "Other"
     )
   ) 
@@ -69,10 +72,16 @@ news <- news %>%
 #  print(n =20)
 
 glimpse(news)
+news %>% 
+  mutate(Fulltext = str_replace_all(Fulltext, "\n", " ")) %>% 
+  select(ID, Content, Fulltext) %>% 
+  write_csv("ChatGPTdata/ArticleContent.csv")
 
-# ------- Start with time
+# ---# ------- Start with time
 
 news <- news %>%
+  select(-Duplicate) %>% 
+  rename(Duplicate = DuplicateCHatGPT) %>% 
   mutate(Page_number = as.character(Page_number)) %>% 
   mutate(Date = as_date(Date))
 
@@ -96,23 +105,21 @@ type_monthly <- n_ts %>%
   group_by(Type) %>% 
   summarise(count = n()) 
 
+dupl_monthly <- n_ts %>% 
+  # filter(Date > "1940-01-01") %>% 
+  tsibble::index_by(year_month = ~ yearmonth(.)) %>% # monthly aggregates
+  group_by(Duplicate, Type) %>% 
+  summarise(count = n()) %>% 
+  ungroup() %>% 
+  as_tibble() %>% 
+  mutate(year_month = as.Date(year_month))
+
 # Aggregate publication dates over monthly periods with type, and 'date' type for ggplot
 docs_monthly <- type_monthly %>%
   as_tibble() %>% 
   mutate(year_month = as.Date(year_month))
 
 # ---- Initial visualisation test - all documents, typed docs, and a grid
-
-autoplot(df_monthly, count) +
-  labs(
-    title = "CD-relevant newspaper articles per Month",
-    x = "Year-Month",
-    y = "Number of articles"
-  ) +
-  theme_minimal()
-
-ggsave("figures/articles_undiff.png")
-
 
 autoplot(type_monthly, count) +
   labs(
@@ -131,32 +138,14 @@ autoplot(type_monthly, count) +
 
 # clean up more of teh Type in original data : too many categories now
 
-
-library(ggplot2)
-
-ggplot(docs_monthly, aes(x = year_month, y = count, color = Type)) +
-  geom_point(size = 2, alpha = 0.7) +  # Scatter plot points
-  labs(
-    title = "CD-relevant newspaper articles per Month",
-    x = "Year-Month",
-    y = "Number of articles"
-  ) +
-  guides(colour = guide_legend(title = "Document type")) +
-  theme_minimal() +
-  theme(
-    legend.position = c(0.9, 0.8),
-    legend.background = element_rect(fill = "white", color = "black"),
-    legend.title = element_text(size = 10),
-    legend.text = element_text(size = 8)
-  )
-
-
 # An area plot can work if you summarize the article counts over time instead of focusing on individual data points.
 
 ggplot(docs_monthly, aes(x = year_month, y = count, fill = Type)) +
   geom_area(position = "stack", alpha = 0.6) +  # Stacked area to show cumulative effect
+  # geom_line(data = dupl_monthly %>% filter(Duplicate == "Y"),  # strange grouping!
+  #           aes(y = count, color = "Duplicates"), size = 1, linetype = "dashed") +
   labs(
-    title = "Articles discussing civil-defense per month from all Danish newspapers",
+    title = "Articles discussing civil-defense in Danish newspapers, duplicates highlighted",
     x = "Year-Month",
     y = "Number of articles"
   ) +
@@ -169,6 +158,64 @@ ggplot(docs_monthly, aes(x = year_month, y = count, fill = Type)) +
     legend.text = element_text(size = 8)
   )
 ggsave( "figures/CDarticlesDK.png")
+
+## Duplicates as geom_line()
+ggplot(docs_monthly, aes(x = year_month, y = count, fill = Type) ) +
+  geom_area(position = "stack", alpha = 0.6) +  # Stacked area for cumulative effect
+  
+  # Corrected: Removed fill=Type from geom_line()
+ # ggplot()+
+  geom_line(data = dupl_monthly %>% filter(Duplicate == "Y"), 
+            aes(x = year_month, y = count, 
+                fill = "Duplicates",
+                color = "Duplicates"), 
+            size = 1, 
+            linetype = "dashed") +
+  
+  # Fix legend: ensure Duplicates appears separately as a dashed line
+  # scale_fill_viridis_d(name = "Article Type")+
+  # scale_fill_manual(name = "Article Type", 
+  # values = c("Critique" = "red", "Negative" = "purple", "Neutral" = "skyblue", 
+  #            "Other" = "aquamarine", "Positive" = "forestgreen", "Validating" = "hotpink")) +
+  scale_color_manual(name = "Legend", values = c("Duplicates" = "black"))+
+  
+  guides(
+    fill = guide_legend(order = 1, title = "Article Type"),
+    color = guide_legend(order = 2, title = "Duplicates")
+  ) +
+  
+  labs(
+    title = "Articles discussing civil-defense in Danish newspapers, duplicates highlighted",
+    x = "Year-Month",
+    y = "Number of articles"
+  ) +
+  guides(fill = guide_legend(title = "Article type")) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.8),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+
+ggsave( "figures/CDarticlesDKdupl.png")
+
+
+## Indicate duplicates with a semi-transparent layer
+
+ggplot(docs_monthly, aes(x = year_month, y = count, fill = Type)) +
+  geom_area(alpha = 0.7) +  # Main sentiment area plot
+  geom_area(data = filter(dupl_monthly, Duplicate == "Y"), 
+            aes(fill = "Duplicate"), 
+            alpha = 0.4) +  # Overlay duplicates
+  labs(title = "Public Discourse Over Time with Duplicates Highlighted",
+       x = "Year-Month",
+       y = "Number of Articles",
+       fill = "Sentiment Type") +
+  theme_minimal()
+
+
+
 
 
 # ---- CD-relevant articles in Aarhus
