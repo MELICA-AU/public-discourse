@@ -72,10 +72,10 @@ news <- news %>%
 #  print(n =20)
 
 glimpse(news)
-news %>% 
-  mutate(Fulltext = str_replace_all(Fulltext, "\n", " ")) %>% 
-  select(ID, Content, Fulltext) %>% 
-  write_csv("ChatGPTdata/ArticleContent.csv")
+# news %>% 
+#   mutate(Fulltext = str_replace_all(Fulltext, "\n", " ")) %>% 
+#   select(ID, Content, Fulltext) %>% 
+#   write_csv("ChatGPTdata/ArticleContent.csv")
 
 # ---# ------- Start with time
 
@@ -92,6 +92,7 @@ n_ts <- as_tsibble(news %>% filter(!is.na(Date)), key = ID, index = Date)
 
 # saveRDS(n_ts, "output_data/articles_ts.rds")
 
+# n_ts <- read_rds("output_data/articles_ts.rds")
 # Aggregate publication dates over monthly periods
 df_monthly <- n_ts %>%
   #filter(Date > "1940-01-01") %>% 
@@ -243,6 +244,17 @@ aa_docs_monthly <- aa_type_monthly %>%
   as_tibble() %>% 
   mutate(year_month = as.Date(year_month))
 
+
+dupl_a_monthly <- an_ts %>% 
+  # filter(Date > "1940-01-01") %>% 
+  tsibble::index_by(year_month = ~ yearmonth(.)) %>% # monthly aggregates
+  group_by(Duplicate, Type) %>% 
+  summarise(count = n()) %>% 
+  ungroup() %>% 
+  as_tibble() %>% 
+  mutate(year_month = as.Date(year_month))
+
+
 # An area plot can work if you summarize the article counts over time instead of focusing on individual data points.
 
 ggplot(aa_docs_monthly, aes(x = year_month, y = count, fill = Type)) +
@@ -260,4 +272,43 @@ ggplot(aa_docs_monthly, aes(x = year_month, y = count, fill = Type)) +
     legend.title = element_text(size = 10),
     legend.text = element_text(size = 8)
   )
-ggsave( "figures/CDarticlesAarhus.png")
+  ggsave( "figures/CDarticlesAarhus.png")
+
+  
+## Duplicates as geom_line()
+ggplot(aa_docs_monthly, aes(x = year_month, y = count, fill = Type) ) +
+    geom_area(position = "stack", alpha = 0.6) +  # Stacked area for cumulative effect
+    geom_line(data = dupl_a_monthly %>% filter(Duplicate == "Y"), 
+              aes(x = year_month, y = count, 
+                  fill = "Duplicates",
+                  color = "Duplicates"), 
+              size = 1, 
+              linetype = "dashed") +
+    
+    # Fix legend: ensure Duplicates appears separately as a dashed line
+    # scale_fill_viridis_d(name = "Article Type")+
+    # scale_fill_manual(name = "Article Type", 
+    # values = c("Critique" = "red", "Negative" = "purple", "Neutral" = "skyblue", 
+    #            "Other" = "aquamarine", "Positive" = "forestgreen", "Validating" = "hotpink")) +
+    scale_color_manual(name = "Legend", values = c("Duplicates" = "black"))+
+    
+    guides(
+      fill = guide_legend(order = 1, title = "Article Type"),
+      color = guide_legend(order = 2, title = "Duplicates")
+    ) +
+    
+    labs(
+      title = "Articles discussing civil-defense in Aarhus newspapers, duplicates highlighted",
+      x = "Year-Month",
+      y = "Number of articles"
+    ) +
+    guides(fill = guide_legend(title = "Article type")) +
+    theme_minimal() +
+    theme(
+      legend.position = c(0.9, 0.8),
+      legend.background = element_rect(fill = "white", color = "black"),
+      legend.title = element_text(size = 10),
+      legend.text = element_text(size = 8)
+    )
+  
+ggsave( "figures/CDarticlesAarhus_dupl.png")
