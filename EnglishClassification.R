@@ -44,12 +44,22 @@ sentiment_monthly <- a_ts %>%
   group_by(Sentiment_EN) %>% 
   summarise(count = n()) 
 
+bias_monthly <- a_ts %>% 
+  # filter(Date > "1940-01-01") %>% 
+  tsibble::index_by(year_month = ~ yearmonth(.)) %>% # monthly aggregates
+  group_by(Bias_EN) %>% 
+  summarise(count = n()) 
+
 # Aggregate publication dates over monthly periods with type, and 'date' type for ggplot
 per_monthly <- perspective_monthly %>%
   as_tibble() %>% 
   mutate(year_month = as.Date(year_month))
 
 sent_monthly <- sentiment_monthly %>%
+  as_tibble() %>% 
+  mutate(year_month = as.Date(year_month))
+
+bias_monthly <- bias_monthly %>%
   as_tibble() %>% 
   mutate(year_month = as.Date(year_month))
 
@@ -91,6 +101,25 @@ ggplot(sent_monthly, aes(x = year_month, y = count, fill = Sentiment_EN)) +
     legend.text = element_text(size = 8)
   )
 ggsave( "figures/Sentiment_enDK.png")
+
+
+ggplot(bias_monthly, aes(x = year_month, y = count, fill = Bias_EN)) +
+  geom_area(position = "stack", alpha = 0.6) +  # Stacked area to show cumulative effect
+  labs(
+    title = "Articles discussing civil-defense per month from all Danish newspapers",
+    x = "Year-Month",
+    y = "Number of articles"
+  ) +
+  guides(fill = guide_legend(title = "Article position")) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.8),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+ggsave( "figures/Bias_enDK.png")
+
 
 
 # ---- CD-relevant articles in Aarhus

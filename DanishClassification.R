@@ -44,6 +44,13 @@ sentiment_monthly <- a_ts %>%
   group_by(Sentiment) %>% 
   summarise(count = n()) 
 
+bias_monthly <- a_ts %>% 
+  # filter(Date > "1940-01-01") %>% 
+  tsibble::index_by(year_month = ~ yearmonth(.)) %>% # monthly aggregates
+  group_by(Bias) %>% 
+  summarise(count = n()) 
+
+
 # Aggregate publication dates over monthly periods with type, and 'date' type for ggplot
 per_monthly <- perspective_monthly %>%
   as_tibble() %>% 
@@ -53,25 +60,11 @@ sent_monthly <- sentiment_monthly %>%
   as_tibble() %>% 
   mutate(year_month = as.Date(year_month))
 
+bias_monthly <- bias_monthly %>%
+  as_tibble() %>% 
+  mutate(year_month = as.Date(year_month))
+
 # ---- Initial visualisation - all articles from DK, Danish fulltext classified by ChatGPT
-
-autoplot(perspective_monthly, count) +
-  labs(
-    title = "CD-relevant newspaper articles per month",
-    x = "Year-Month",
-    y = "Number of articles"
-  ) +
-  guides(colour = guide_legend(title = "Document type")) +
-  theme_minimal() +
-  theme(
-    legend.position.inside = c(0.9, 0.8),
-    legend.background = element_rect(fill = "white", color = "black"),  # Optional: Add a background to the legend for better visibility
-    legend.title = element_text(size = 10),  # Adjust legend title size
-    legend.text = element_text(size = 8)  # Adjust legend text size
-  )# Adjust these values to move the legend
-
-# clean up more of teh Type in original data : too many categories now
-
 
 library(ggplot2)
 
@@ -110,6 +103,23 @@ ggplot(sent_monthly, aes(x = year_month, y = count, fill = Sentiment)) +
     legend.text = element_text(size = 8)
   )
 ggsave( "figures/SentimentDK.png")
+
+ggplot(bias_monthly, aes(x = year_month, y = count, fill = Bias)) +
+  geom_area(position = "stack", alpha = 0.6) +  # Stacked area to show cumulative effect
+  labs(
+    title = "Articles discussing civil-defense per month from all Danish newspapers",
+    x = "Year-Month",
+    y = "Number of articles"
+  ) +
+  guides(fill = guide_legend(title = "Article position")) +
+  theme_minimal() +
+  theme(
+    legend.position = c(0.9, 0.8),
+    legend.background = element_rect(fill = "white", color = "black"),
+    legend.title = element_text(size = 10),
+    legend.text = element_text(size = 8)
+  )
+ggsave( "figures/BiasDK.png")
 
 
 # ---- CD-relevant articles in Aarhus
