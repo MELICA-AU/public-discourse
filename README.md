@@ -38,7 +38,7 @@ The full collection of articles that form basis of the articles_ts.rds is archiv
 2. Mouse
 3. Coffee
 
-## Screenshots
+## Visualisation
 ![Example visual](./figures/CDarticlesDK.png)
 
 
