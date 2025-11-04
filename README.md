@@ -1,12 +1,7 @@
 # Public Discourse on Civil Defense 
 *ANALYSIS*
 
-MELICA investigates the empirical basis of Cold-War preparedness in Aarhus by (1) reconstructing the everyday experience of individuals living in Cold-War Aarhus through spatial analysis of shelter locations and text analysis of written sources to assess whether the evidence points towards a militarization of everyday life or ‘normalization’ of war, (2) identifying gaps between how Cold-War civil defense was conceptualized at the national level and delivered at the local level in Aarhus, and (3) evaluating civil defense effectiveness by simulating a shelter drill, identifying weak points and stakeholders in civil defense planning.
-
-The roadmap to accomplish our goals combines three research activities:
-* Documentation of surviving civilian shelters in the Aarhus kommune, on the basis of field survey and archival data
-* Creation of a thematic digital archive focused on the civil defense from materials present in the Aarhus City Archive
-* Smart text and spatial analysis of the two archives :smile:
+This repository analyzes a sample of ca 100 articles per decade spanning from 1949-1989, written on the topic of civil-defense in Aarhus, stored in Mediestream, the Danish public repository of digitized newspapers. It presents an analysis of the main themes the were broached by the media and controversies that surrounded the build-up of civil-defense in Denmark since the Second World War, that formed the basis for a paper in the *Journal of Cold War Studies*. In this repository we visualize several timeseries pointing to the differentiation of opinion over time and across different newspaper venues, and illustrate the changing emotional loading and polarity of the public discourse on the basis of  ChatGPT-generated classifications of the articles' English summaries.
 
 ---
 
@@ -16,15 +11,12 @@ Analysis of public discourse on the basis of Mediastream articles
 ---
 ## Authors
 * Adela Sobotkova [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)]([(https://orcid.org/0000-0002-4541-3963)]), MELICA project, adela@cas.au.dk
-* [Name], [ORCID], [Institution], [email]
-* [Name], [ORCID], [Institution], [email]
-* [Name], [ORCID], [Institution], [email]
 
 ## License
 CC-BY-SA 4.0, see attached License.md
 
 ## DOI
-[Here will be DOI or some other identifier once we have it]
+[Here will be DOI or some other identifier of the resulting article once we have it]
 
 ### References
 [Here will go related articles or other sources we will publish/create]
@@ -33,38 +25,21 @@ CC-BY-SA 4.0, see attached License.md
 # How to use this repository
 
 ## Sources and prerequisites
-[Describe the provenance of data used in the scripts contained and clarify how it is harvested and what other prerequisites are required to get the scripts working. In case of pure tool attribute any reused scripts to source, etc., license and specify any prerequisites or technical requirements.]
+Visualisations depend on articles_ts.rds tsibble, a spatial type of tibble (native R format for a table or a dataframe) that facilitates temporal visualisation. This dataset is created from a [googlesheet](https://docs.google.com/document/d/1wlaoUXUlRF98wJx0uPl05pk4NlGBJtUAfEJgGIU47BU/edit?tab=t.0#heading=h.643govzc31g8 ) containing metadata, full-text and English summary of over 500 newspaper articles, manually extracted from Mediestream responses to keywords such as 'civilforsvar', 'mening', 'debat', manually compiled by Stine Lykke Thomassen during 2024-2025. 
 
 ### Data
-Anything else on data metadata and data used. Link to data repository or explanatory article. 
+The full collection of articles that form basis of the articles_ts.rds is archived in [public_discourse folder on the project's GoogleDrive](https://drive.google.com/drive/folders/1aCysLseoVLjz1OBiVglzLTYXRJUt1PWX)
 
 ### Software
-1. Software X, minimum version 123
-1. Software Y, version 456
-
-### Registered account
-1. CompanyA
-1. CompanyB
+1. R 4.3.3
 
 ### Hardware
-1. Multiple-screen
-1. Mouse
-1. Coffee
-
----
-## Installation
-[Describe the steps necessary to install the tool/package; example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2]
-
----
-## Instructions 
-[Describe first steps, how to use the current repository by a typical user - the digital historian with limited technical skills]
-1. First, do ...
-1. Second, do ...
-1. Third, go to ...
-
+1. Multiple-screens
+2. Mouse
+3. Coffee
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+![Example visual](./figures/CDarticlesDK.png)
 
 
 
